@@ -1,0 +1,11 @@
+{
+    "welcome": "Welcome to our store!",
+    "product": {
+      "price": "Price",
+      "backToHome": "Back to Home"
+    },
+    "meta": {
+      "homeTitle": "Welcome to My E-commerce Site",
+      "homeDescription": "Discover the best products in our store."
+    }
+  }

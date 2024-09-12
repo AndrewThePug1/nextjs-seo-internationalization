@@ -1,0 +1,12 @@
+{
+    "welcome": "¡Bienvenido a nuestra tienda!",
+    "product": {
+      "price": "Precio",
+      "backToHome": "Volver al inicio"
+    },
+    "meta": {
+      "homeTitle": "Bienvenido a Mi Sitio de Comercio Electrónico",
+      "homeDescription": "Descubre los mejores productos en nuestra tienda."
+    }
+  }
+  
