@@ -2,7 +2,8 @@ import Link from 'next/link';
 import products from '../data/products';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import Head from 'next/head';
+import SEO from '../components/SEO';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const HomePage = () => {
   const { locale } = useRouter();
@@ -10,10 +11,10 @@ const HomePage = () => {
 
   return (
     <>
-      <Head>
-        <title>{t('meta.homeTitle')}</title>
-        <meta name="description" content={t('meta.homeDescription')} />
-      </Head>
+      <SEO
+        title={t('meta.homeTitle')}
+        description={t('meta.homeDescription')}
+      />
       <div>
         <h1>{t('welcome')}</h1>
         <ul>
@@ -35,3 +36,9 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
